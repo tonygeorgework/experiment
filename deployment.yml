@@ -1,5 +1,5 @@
 - name: daily
-  schedule: 0 12 * * *
+  schedule: * * * * *
   steps:
     - name: run first sales model
       command: dbt run --models example
