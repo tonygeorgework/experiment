@@ -1,7 +1,18 @@
-- name: daily
-  schedule: * * * * *
-  steps:
-    - name: run first sales model
-      command: dbt run --models example
-    - name: run second sales model
-      command: dbt run --models example
+jobs:
+  - name: daytime
+    schedule: 0 12 * * *
+    steps:
+      - name: run models
+        command: dbt run
+      - name: test models
+        command: dbt test
+  - name: nightly
+    schedule: 0 0 * * *
+    steps:
+      - name: run models
+        command: dbt run
+  - name: every5minutes
+    schedule: '*/5 * * * *' # The example will run every 5 minutes. Note that the cron string is quoted as otherwise it will be treated as invalid alias node (see https://yaml.org/spec/1.2/spec.html#*%20alias// for details)
+    steps:
+      - name: run models
+        command: dbt run --no-version-check
