@@ -1,7 +1,7 @@
 - name: daily
   schedule: 0 12 * * *
   steps:
-     - name: run first sales model
-       command: dbt run --models example 
-     - name: run second sales model
-       command: dbt run --models example
+    - name: run first sales model
+      command: dbt run --models example
+    - name: run second sales model
+      command: dbt run --models example
