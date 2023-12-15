@@ -1,4 +1,4 @@
 sources:
-  - name: fivetran_poc_schema
+  - name: tony_default
     tables:
       - name: CUSTOMER
