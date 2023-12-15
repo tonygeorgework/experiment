@@ -1,4 +1,4 @@
 sources:
   - name: fivetran_poc_schema_mydatabase
     tables:
-      - name: customer_transformed
+      - name: customer
