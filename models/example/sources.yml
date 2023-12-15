@@ -1,5 +1,3 @@
-version: 2
-    
 sources:
   - name: fivetran_poc_schema
     tables:
