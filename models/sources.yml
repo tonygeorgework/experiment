@@ -1,4 +1,5 @@
 sources:
-  - name: fivetran_poc_schema_mydatabase
+  - name: fivetran_poc_schema
+    schema: fivetran_poc_schema_mydatabase  
     tables:
-      - name: CUSTOMER
+      - name: customer
