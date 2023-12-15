@@ -1,4 +1,0 @@
-sources:
-  - name: fivetran_poc_schema_mydatabase
-    tables:
-      - name: CUSTOMER
